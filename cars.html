@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rolls Royce Cars</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav {
+      background-color: #444;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .car {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin: 10px;
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rolls Royce Cars</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('models')">Models</a>
+    <a href="#" onclick="showPage('contact')">Contact</a>
+  </nav>
+
+  <main>
+    <div id="home">
+      <h2>Welcome to Rolls Royce Cars</h2>
+      <p>Explore our luxurious collection of cars.</p>
+      <img src="rollsroyce.jpg" alt="Rolls Royce Phantom">
+    </div>
+
+    <div id="models" style="display: none;">
+      <h2>Rolls Royce Models</h2>
+      <div class="car">
+        <h3>Phantom</h3>
+        <img src="phantom.jpg" alt="Rolls Royce Phantom">
+        <p>Description of Rolls Royce Phantom.</p>
+      </div>
+
+      <div class="car">
+        <h3>Cullinan</h3>
+        <img src="cullinan.jpg" alt="Rolls Royce Cullinan">
+        <p>Description of Rolls Royce Cullinan.</p>
+      </div>
+    </div>
+
+    <div id="contact" style="display: none;">
+      <h2>Contact Us</h2>
+      <p>Feel free to reach out to us for more information.</p>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2023 Rolls Royce Cars
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      const pages = ['home', 'models', 'contact'];
+      pages.forEach(page => {
+        const element = document.getElementById(page);
+        if (page === pageId) {
+          element.style.display = 'block';
+        } else {
+          element.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
